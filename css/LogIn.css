@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+
+*{padding: 0;margin: 0;box-sizing: border-box;}
+ul,li{list-style: none;}
+a{color: inherit;text-decoration: none;}
+img{vertical-align: text-top;}
+head,body{background: #ffffff;font-family: "Inter", sans-serif;}
+:root{--Meintext:#CCA3FF;}
+
+/*  =========================================================헤드*/
+.Mobile_header{display: none;}
+header{width: 430px;height: 100vh;overflow: hidden;transition: 0.8s 0.5s ease-in-out;position: fixed;z-index: 5;}
+
+
+header .mainmenu{position: absolute;left: 100%;top: 0;width: 100%;height: 100%;transition: 0.5s;
+}
+header .mainmenu.on{left: 0;
+}
+.bg{width: 100%;height: 100%;background-color: black;position: absolute;top: 0;left:0%;opacity: 0.6;z-index: 2;}
+header nav{position: absolute;z-index: 10;left: 59px;top: 110px;}
+header nav>ul>li>a{color: #fff;font-size: 22px;text-align:left;padding:8px 16px;line-height:7vh; border-radius: 15px;}
+header nav>ul>li:hover>a{background-color: #fff;color:#000;font-weight: 600;transition: 0.3s;}
+
+header .img {width: 100%;height: 100%;background: url(../img/Login/bg2.jpg)no-repeat center/cover; transition: 0.8s 0.5s ease-in-out;background-position: 50%;filter: brightness(40%) saturate(150%) ;}
+header .img::before{content: "";display: block;  width: 100%;height: 100%;background-color: #000;position: absolute;mask-image: linear-gradient(to bottom , rgba(0, 0, 0, 0)60%, rgba(0, 0, 0, 1));}
+
+header .logo{position: absolute;left: 50%;bottom: 4vh; transform: translateX(-50%);opacity: 0.5;transition: 0.8s 1s ease-in-out;}
+header .logo img{height: 18px;margin: 0 auto;}
+
+
+/* ---------햄버거메뉴 아이콘 모션 */
+.menu_icon { display: inline-block; position: relative; width:29px; height: 26px; } 
+.menu_icon span { position: absolute; left: 50%; width: 100%; height: 5px; background: #ffffff; border-radius: 4px; transform:translate(-50%,0) rotate(0deg); transition: 0.2s ease-in-out; } 
+.menu_icon span:nth-child(1) { top: 0px; } 
+.menu_icon span:nth-child(2), 
+.menu_icon span:nth-child(3) { top: 50%; transform: translate(-50%,-50%); } 
+.menu_icon span:nth-child(4) { bottom: 0; } 
+.menu_icon.active span:nth-child(1) { top: 50%; width: 0; transform: translate(-50%,-50%); }
+.menu_icon.active span:nth-child(2) { transform:translate(-50%, -50%) rotate(45deg); } 
+.menu_icon.active span:nth-child(3) { transform:translate(-50%, -50%) rotate(-45deg); } 
+.menu_icon.active span:nth-child(4) { bottom: 50%; width: 0; transform: translate(-50%,50%); }
+.menuIcon{position: absolute;top: 35px;right:22px;transition: 0.8s 1s ease-in-out;z-index: 5;}
+/* --------------------------------------- */
+
+
+/* ====================================== main ===================== */
+main{position: relative;}
+main .icon{position: absolute;right: 45px;top:35px;}
+main .icon ul{display: flex;}
+main .icon ul li{padding-left: 26px;transition: 0.2s;}
+main .icon ul li:hover{filter: contrast(1%);}
+main .Login{height: 373px;width:calc(100% - 430px);position: absolute;left: 430px;top: 183px;}
+main .log .Logo{margin: 0 auto;display: flex;justify-content: center;}
+main .log .input{margin-top: 29px;}
+main .log .input li{width: 428px;margin: 0 auto;height: 35px;border: 1px solid #878787;}
+main .log .input li:first-child{display: flex;}
+main .log .input li:first-child img{margin-top: 12px;margin-left: 13px;position: absolute;}
+main .log .input input{width: 100%;height: 100%;border: none;padding-left: 42px;  outline: none;}
+
+main .log .input li:last-child{border-top: none;display: flex;}
+main .log .input li:last-child img{position: absolute;margin-top: 8px;margin-left: 14px;}
+main .log span{font-size: 12px;color: #878787;}
+main .small{width: 429px;margin: 0 auto;position: relative;margin-top: 10px;display: flex;}
+
+
+main .Login  .log .small .check{position: absolute;right: 0;}
+
+main .Login  .log .small .check::before{content: "";display: block;width: 15px;height: 15px;background: #fff;border: 1px solid #878787;position: absolute;right: 90px;}
+main .Login  .log .small .check.on::before{content: "";display: block;width: 15px;height: 15px;background: #CCA3FF;border: 1px solid #878787;position: absolute;right: 90px;}
+main .Login  .log .small .check img{position: absolute;right: 93px;top: 3px;}
+main .Login  .log button{height: 35px;width: 428px;border-radius: 68px;background-color: #AB70F3;border: none; font-size: 15px;color: #fff;margin-top: 11px;position: absolute;left: 50%;transform: translateX(-50%);}
+main .Login  .log button a{width: 100%;height: 100%;display: block;line-height: 35px;border-radius: 68px;}
+
+.Login .line{display: flex;width: 428px;margin: 0 auto;margin-top: 72px;align-items: center;}
+.Login .line li{margin-right: 4px;margin-left: 4px;}
+
+.Login .line li:nth-child(1){width: 100%;background-color: #878787;height: 0.5px;margin-left: 0;}
+.Login .line li:nth-child(2){width: 170px;font-weight: bold;font-size: 12px;color: #878787;text-align: center;}
+.Login .line li:nth-child(3){width:100%;background-color: #878787;height: 0.5px;margin-right:0;}
+
+/* ----------------------------네이버등 기타 버튼1 */
+.Login .button {display: flex;width: 428px;margin: 0 auto;margin-top: 22px;gap: 10px;}
+.Login .button li{flex: 3;height: 35px;border-radius: 38px;line-height: 35px;font-size: 12px;font-weight: bolder;text-align: center;}
+.Login .button li a{display: block;border-radius: 38px;}
+.Login .button .naver{background-color: #2DB400;color: #fff;}
+.Login .button .kakao{background-color: #FEE500;color: #371C1D;}
+.Login .button .check{background-color: #A4A4A4;color: #fff;}
+
+.Login .button li img{padding-right: 9px;}
+
+.Login p.join {font-size: 12px;color: #3F3F3F;text-align: center;margin-top: 68px;}
+.Login p.join span{font-size: 14px;color: #AB71F3;text-decoration-line: underline;}
+
+
+/* =============================================footer */
+footer{height: 236px;background-color: #151515;position: relative;bottom: -744px;}
+footer .f_menu{color: #fff;position: absolute;top: 50px;left: 493px;
+}
+footer .f_menu ul{display: flex;font-size: 12px;}
+footer .f_menu ul li{border-right: 1px solid #fff;padding-right: 10px;padding-left: 10px;height: 10px;line-height: 10px;}
+footer .f_menu ul li:first-child{padding-left:0;}
+footer .f_menu ul li:last-child{border-right: none;}
+footer p{font-size: 12px;color: #fff;position: absolute;left: 493px;line-height: 22px;opacity: 0.6; top: 106px;
+}
+footer .SNS {position: absolute;top: 35px;right: 50px;}
+footer .SNS ul{display: flex;}
+footer .SNS ul li{padding-left: 32px;opacity: 0.5;transition: 0.2s;}
+footer .SNS ul li:hover{opacity: 1;}
+.menu{display: none;}
+
+@media (max-width:1018px) {
+  .menu{display: block;}
+  header{display: none;}
+  
+  .Mobile_header{display: block;position: fixed;z-index: 10;}
+  .Mobile_header .img{height: 77px;overflow: hidden;}
+  .Mobile_header .img img{width: 100%;object-fit: cover;transform: translateY(-150px);filter: brightness(15%);}
+  .Mobile_header .logo{position: absolute;top:60%;left: 50%;transform: translate(-50% ,-50%);z-index: 10;}
+ 
+  .Mobile_header .logo img{width: 165px;opacity: 0.8;}
+
+  .Mobile_header div.menuicon {left: 39px;top: 32px;position: absolute;opacity: 0.5;transition: 0.2s;}
+  .Mobile_header div.menuicon:hover{opacity: 1;}
+ .menu {width: 360px;height: 100%;position: fixed;z-index: 20;overflow: hidden;transition: 0.5s;left: -400px;}
+ .menu.Action{left: 0;}
+.menu .bg{height: 100vh;opacity: 0.8;}
+.menu  nav{position: absolute;z-index: 10;left: 59px;top: 110px;}
+.menu  nav>ul>li>a{color: #fff;font-size: 22px;text-align:left;padding:8px 16px;line-height:7vh; border-radius: 15px;}
+.menu  nav>ul>li:hover>a{background-color: #fff;color:#000;font-weight: 600;transition: 0.3s;}
+ .Mobile_header .icon {position: absolute;top:32px;right: 45px;filter:  invert(100%);}
+   main .icon{display: none;}
+  .Mobile_header .icon ul{display: flex;}
+  .Mobile_header .icon ul li{padding-left: 26px;transition: 0.2s;}
+  .Mobile_header .icon ul li:hover{filter: contrast(1%);}
+  main .Login{width: 100%;left: 0;}
+  main .Login .log button{width: 90%;max-width: 428px;}
+
+
+
+    footer .f_menu{ left: 40px;top: 70px;}
+    footer p{bottom: 70px;left: 40px;padding-right: 40px;}
+     
+   
+}
+@media (max-width:500px) {
+
+  .Mobile_header div.menuicon{top: 50%;transform: translateY(-50%);}
+  .Mobile_header{height: 51px;}
+  .Mobile_header .img{height: 100%;}
+  .Mobile_header .logo{display: none;}
+  .Mobile_header .icon{top: 50%;transform: translateY(-50%);}
+  .Mobile_header .icon{top: 50%;transform: translateY(-50%);}
+  main .but{width: 340px;flex-wrap: wrap;left: 53%;top: 76px;}
+  main .but li{margin-bottom:8px;}
+  main .log .input li{width:90%;}
+  main .small{width: 90%;}
+  .Login .line{width: 90%;}
+  .Login .button{width: 90%;}
+
+  
+}
+
+

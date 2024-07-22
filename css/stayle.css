@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+
+*{padding: 0;margin: 0;box-sizing: border-box;}
+
+ul,li{list-style: none;}
+a{color: inherit;text-decoration: none;}
+img{vertical-align: text-top;max-width: 100%;}
+head,body{background: #000;font-family: "Inter", sans-serif;}
+/* 초기화 끝 */
+
+:root{--main:#C1ADDA;--textMain:#CCA3FF;}
+/*  */
+
+.logo{display: none;}
+.parent{  display: grid;height: 100vh;padding: 40px;
+  grid-template-columns: 1.4fr 1fr 2.1fr 1.5fr 1fr 2.3fr;
+  grid-template-rows: 2.5fr 0.7fr 0.4fr 1.6fr;
+  gap: 25px 25px;
+  grid-auto-flow:row dense;
+  align-content: stretch;
+  grid-template-areas:
+    "div1 div1 div2 div2 div3 div4"
+    "div1 div1 div5 div6 div6 div4"
+    "div1 div1 div5 div6 div6 div9"
+    "div7 div8 div8 div6 div6 div9";min-width: 1060px;
+}
+.parent>div{border-radius: 15px;position: relative;}
+
+.parent .text{position: absolute;top: 0;z-index: 20;opacity: 0;}
+.parent>div:hover .text{opacity: 1;}
+.parent img{width: 100%;height: 100%;object-fit: contain;}
+.parent>div:hover #img{filter: brightness(40%); scale: 1.05;
+}
+.parent #img{transition: 0.3s;}
+.parent a{height: 100%;border-radius: 15px;display: block;overflow: hidden;}
+.parent button{position: absolute;bottom: 0;display: none;}
+.parent h2::after{content: "";display: block;width: 2px;height: 4.5vw;background-color: var(--textMain);bottom: 0;position: absolute;bottom: 0;left: 0;margin-left: -10px;}
+
+.parent h2{color: var(--textMain);font-size:2.3vw;padding-bottom:1vw;}
+.parent p{color: #fff;font-size:0.8vw;}
+
+.img1{background:url(../img/main/mainImg1.jpg) no-repeat center/cover;width: 100%;height: 100%;border-radius: 15px;}
+
+
+.img2{background:url(../img/main/mainImg5.jpg) no-repeat center/cover;width: 100%;height: 100%;border-radius: 13px;}
+
+
+.img3{background:url(../img/main/mainImg6.png) no-repeat center/cover;width: 270px;height: 360px; position: absolute;right: -50px; transition: 0.3s ease-out;z-index: 20;scale: 0.7;top:-1vw;
+
+}
+ 
+.img3:hover{right: -1vw;rotate: -5deg;scale: 0.7;}
+
+.img4{background:url(../img/main/mainImg3.jpg) no-repeat center/cover;width: 90%;height: 55%;position: absolute;left: 5%;bottom: 23px;border-radius: 15px;}
+.img5{background:url(../img/main/mainImg7.jpg) no-repeat center/cover;width: 100%;height: 100%;border-radius: 15px;}
+.img6{background:url(../img/main/mainImg4.jpg) no-repeat center/cover;width: 100%;height: 100%;border-radius: 15px;}
+.img8{background:url(../img/main/mainImg2.jpg) no-repeat center/cover;width: 100%;height: 100%;border-radius: 15px;}
+
+
+.div1 { grid-area: div1;}
+.div1 .text{margin-top:48vh;position: absolute;left:2.5vw;}
+.div2 { grid-area: div2; z-index: 10;}
+.div2 .text{margin-top:25vh;position: absolute;left:2.5vw;}
+
+.div3 { grid-area: div3;background: #55819C; }
+
+.div3 .head{width:200%;height: 100%;position: absolute;right: 0;  overflow: hidden; top: 0;
+}
+
+
+.div4 { grid-area: div4; }
+.div4 a{background-color: #A5BCCE;}
+.div4 .text{margin-top:5.3vh;position: absolute;left:2.5vw;}
+
+
+.div5 { grid-area: div5;}
+.div5 h2{position: absolute;top: 60%;left: 50%;transform: translate(-50%,-50%);transition: 0.3s;}
+/* .div5 h2:hover{transform-origin:center;scale: 1.05;} */
+.div5 h2 img{ scale: 1;}
+.parent .div5 h2::after{display: none;}
+
+
+.div6 { grid-area: div6; }
+.div6 .text{margin-top:30vh;position: absolute;left:2.5vw;}
+.div7 { grid-area: div7;}
+.div7 a{display: block;height: 100%;border-radius:15px ; background-color: #A49898;}
+.div7 .text{margin-top:5vh;position: absolute;left:2.5vw;}
+.div7 .text h2{font-size: 1.8vw;}
+.parent .div7 .text h2::after{height: 1.8vw;top:3px;}
+
+.div8 { grid-area: div8; }
+.div8 .text{margin-top:12vh;position: absolute;left:2.5vw;}
+
+.div9 { grid-area: div9;}
+.div9 #img{background: #C1ADDA; width: 100%;height: 100%;}
+.div9 .text{margin-top:4vh;position: absolute;left:2.5vw;}
+.div9 .text h2{font-size: 1.8vw;}
+.div9 .text ul {color: #fff;font-size: 0.9vw;}
+.div9 .text ul li{line-height: 152%;}
+.parent .div9 .text h2::after{height: 11vw;top:3px;}
+
+.parent>.div9:hover #img{filter: brightness(40%); scale: 1.05;}
+
+@media (max-width : 1024px){
+  
+  .logo{display: block;position: relative;background-color: #55819C;top:36px;}
+  .logo img{width: 35vw;max-width: 25vw;position: absolute;left: 50%;transform: translateX(-50%);min-width: 34vw;}
+
+  .parent{  grid-template-columns: 4fr 0.8fr 5fr;padding:17vw 40px 100px;min-width: auto;
+    grid-template-rows: 390px 266px 335px 311px;
+    grid-auto-rows: 1fr;
+    gap: 16px 16px;
+    grid-template-areas:
+      "div1 div1 div4"
+      "div9 div2 div2"
+      "div8 div8 div8"     
+      "div6 div6 div7";
+      align-content: stretch; 
+  }
+  .parent::before{content: "";display: block;padding-bottom: 20px;}
+  .parent>div{position: relative;}
+  .parent div.text {display: none;}
+  .parent>div button{display: block;border: none;padding: 5px 20px;border-radius: 0px;background-color: rgba(166, 96, 150, 0.5);font-size: 3vw;font-weight: bold;position: relative;color: #fff;text-shadow: 1px 1px 2px #00000034;border-radius: 2px;}
+
+
+  .div1 { grid-area: div1; }
+
+  .parent .div1 button{position: absolute;left: 50%;transform: translateX(-50%);bottom: 50px;}
+  .div3{display: none;}
+  .div9 { grid-area: div9; }
+  .parent .div9 button{position: absolute;left: 50%;transform: translateX(-50%);bottom: 110px;width: 30vw;background: none;text-shadow: none;}
+  
+  .div2 { grid-area: div2; }
+
+  .parent .div2 button{position: absolute;left: 50%;transform: translateX(-50%);bottom: 40px;}
+  .div8 { grid-area: div8; }
+  .div8 .img8{background-position:60%;}
+  .parent .div8 button{position: absolute;left: 30%;transform: translateX(-50%);bottom: 30px;}
+  .div6 { grid-area: div6; }
+  
+  .div6 .img6{background-position:40%;}
+  .parent .div6 button{position: absolute;left: 50%;transform: translateX(-50%);bottom:230px;}
+  .div7 { grid-area: div7; }
+  .parent .div7 button{position: absolute;left: 50%;transform: translateX(-50%);bottom:140px;background: none;text-shadow: none;font-size:4vw;}
+  .div4 { grid-area: div4; }
+
+  .parent .div4 button{position: absolute;left: 50%;transform: translateX(-50%);bottom: 300px;background: none;
+  text-shadow: none;font-size: 4vw;
+  }
+  .div5{display: none;}
+}
+@media (max-width : 414px) {
+ 
+  .parent {padding:78px 18px 0 ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 196px 213px 205px 223px 185px 79px 106px;
+    grid-auto-rows: 1fr;
+    gap: 16px 8px;
+    grid-auto-flow: row dense;
+    align-content: start;
+    grid-template-areas:
+      "div1"
+      "div4"
+      "div2"
+      "div6"
+      "div8"
+      "div7"
+      "div9";
+  } 
+
+  .parent>div button{z-index: 10;font-size:5vw;overflow-wrap: break-word;padding:5px 30px;}
+  .logo{display: block;position: relative;background-color: #55819C;top:20px;}
+  .logo img{width: 50vw;max-width: 50vw;position: absolute;left: 50%;transform: translateX(-50%);min-width: 20vw;}
+  .div1 { grid-area: div1; }
+  .parent .div1 button{bottom: 20px;}
+  .div4 { grid-area: div4; }
+  .parent .div4 button{top: 20px;font-size: 5vw;}
+  .div2 { grid-area: div2; }
+  .parent .div2 button{bottom: 20px;font-size: 5vw;}
+  .div6 { grid-area: div6; }
+  .parent .div6 button{bottom: 10px;font-size: 5vw;}
+  .div8 { grid-area: div8; }
+  .parent .div8 button{bottom: 10px;font-size: 4vw;left: 30vw;}
+  .div7 { grid-area: div7; }
+  .parent .div7 button{bottom:20px;font-size: 5vw;}
+  .div9 { grid-area: div9; }
+  .parent .div9 button{bottom:35px;font-size: 5vw;width: 100%;}
+
+  
+  
+  
+  
+ 
+  
+}

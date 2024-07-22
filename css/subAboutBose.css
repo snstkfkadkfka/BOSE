@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+
+*{padding: 0;margin: 0;box-sizing: border-box;}
+ul,li{list-style: none;}
+a{color: inherit;text-decoration: none;}
+img{vertical-align: text-top;}
+head,body{background: #ffffff;font-family: "Inter", sans-serif;}
+:root{--Meintext:#CCA3FF;}
+
+/*  =========================================================헤드*/
+.Mobile_header{display: none;}
+header{width: 100vw;height: 100vh;overflow: hidden;transition: 0.8s 0.5s ease-in-out;position: fixed;z-index: 5;}
+header.on{width: 430px;height:100vh;}
+header.on .logo{opacity:0.5;}
+header.on .menuIcon{opacity:1;}
+header.on .text{top: 80vh;}
+header.on h2{font-size: 50px;width: 300px;}
+header.on p{font-size: 16px;}
+header.on .img {filter: brightness(90%);}
+
+header .mainmenu{position: absolute;left: 100%;top: 0;width: 100%;height: 100%;transition: 0.5s;
+}
+header .mainmenu.on{left: 0;
+}
+.bg{width: 100%;height: 100%;background-color: black;position: absolute;top: 0;left:0%;opacity: 0.6;z-index: 2;}
+header nav{position: absolute;z-index: 10;left: 59px;top: 110px;}
+header nav>ul>li>a{color: #fff;font-size: 22px;text-align:left;padding:8px 16px;line-height:7vh; border-radius: 15px;}
+header nav>ul>li:hover>a{background-color: #fff;color:#000;font-weight: 600;transition: 0.3s;}
+
+header .img {width: 100%;height: 100%;background: url(../img/SubAboutBoss/bg.png)no-repeat center/cover; transition: 0.8s 0.5s ease-in-out;background-position: 20%;}
+header .img::before{content: "";display: block;  width: 100%;height: 100%;background-color: #000;position: absolute;mask-image: linear-gradient(to bottom , rgba(0, 0, 0, 0)60%, rgba(0, 0, 0, 1));}
+header .text{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);transition: 0.8s 0.5s ease-in-out;}
+
+header h2{ color: var(--Meintext);font-size: 88px;transition: 0.8s 0.5s ease-in-out;text-shadow: 2px 2px 4px rgba(0,0,0,0.4);width: 600px;}
+header p{font-size: 28px;text-align: center;color: #fff;margin-top: 22px;transition: 0.8s 0.5s ease-in-out;}
+header .logo{position: absolute;left: 50%;bottom: 4vh; transform: translateX(-50%);opacity: 0;transition: 0.8s 1s ease-in-out;}
+header .logo img{height: 18px;margin: 0 auto;}
+
+/* ---------햄버거메뉴 아이콘 모션 */
+.menu_icon { display: inline-block; position: relative; width:29px; height: 26px; } 
+.menu_icon span { position: absolute; left: 50%; width: 100%; height: 5px; background: #ffffff; border-radius: 4px; transform:translate(-50%,0) rotate(0deg); transition: 0.2s ease-in-out; } 
+.menu_icon span:nth-child(1) { top: 0px; } 
+.menu_icon span:nth-child(2), 
+.menu_icon span:nth-child(3) { top: 50%; transform: translate(-50%,-50%); } 
+.menu_icon span:nth-child(4) { bottom: 0; } 
+.menu_icon.active span:nth-child(1) { top: 50%; width: 0; transform: translate(-50%,-50%); }
+.menu_icon.active span:nth-child(2) { transform:translate(-50%, -50%) rotate(45deg); } 
+.menu_icon.active span:nth-child(3) { transform:translate(-50%, -50%) rotate(-45deg); } 
+.menu_icon.active span:nth-child(4) { bottom: 50%; width: 0; transform: translate(-50%,50%); }
+.menuIcon{position: absolute;top: 35px;right:22px;opacity: 0;transition: 0.8s 1s ease-in-out;z-index: 5;}
+/* --------------------------------------- */
+
+
+/* ====================================== main ===================== */
+main{position: relative;}
+main .icon{position: absolute;right: 45px;top:35px;}
+main .icon ul{display: flex;}
+main .icon ul li{padding-left: 26px;transition: 0.2s;}
+main .icon ul li:hover{filter: contrast(1%);}
+
+main .but{display: flex;top: 92px;left: 493px;position: absolute;z-index: 0;}
+main .but li{border-radius:50px; border: 1px solid #AB71F3;margin-right: 15px;color: #3F3F3F;}
+main .but li.on{background-color: #AB71F3;color: #fff;}
+main .but li a{display: block;width: 152px;height: 32px;text-align: center;line-height: 32px;font-size: 16px;}
+
+main .Bose li:first-child{width: 1119px;height: 351px;top: 211px;position: absolute;left: 28vw}
+main .Bose li:last-child{width: 1190px;height: 351px;position: absolute;left: 28vw;top: 589px;}
+main .Bose li:first-child img{position: absolute;width: 433px;height: 351px;object-fit: cover;border-radius: 60px 0 60px 0;top: 0;left: 0;}
+main .Bose h2{position: absolute;font-size: 40px;font-weight: bold;letter-spacing: -2px;}
+main .Bose p{font-size: 15px;line-height: 24px;position: absolute;letter-spacing: -0.7px;font-weight: 600;opacity: 0.9;}
+main .Bose span{font-size: 16px;line-height: 24px;position: absolute;opacity: 0.7;left: 475px;top: 121px;letter-spacing: -1px;}
+main .Bose li:first-child h2{top: 58px;left:475px;}
+main .Bose li:first-child p{top: 189px;left:475px;}
+main .Bose li:last-child img{width: 465px;height: 351px;position: absolute;right: 0;top: 0;object-fit: cover;border-radius: 60px 0 60px 0;}
+main .Bose li:last-child h2{top: 60px;left: 0;}
+main .Bose li:last-child p{top: 143px;left: 0;width: 661px;}
+main .Bose li:first-child p.Dr{position: absolute;color:#fff;left: 244px;z-index: 2;opacity: 0.7;font-weight: 300;top: 315px;letter-spacing: 0px;}
+
+/* =============================================footer */
+footer{height: 236px;background-color: #151515;position: relative;bottom: -1000px;}
+footer .f_menu{color: #fff;position: absolute;top: 50px;left: 493px;
+}
+footer .f_menu ul{display: flex;font-size: 12px;}
+footer .f_menu ul li{border-right: 1px solid #fff;padding-right: 10px;padding-left: 10px;height: 10px;line-height: 10px;}
+footer .f_menu ul li:first-child{padding-left:0;}
+footer .f_menu ul li:last-child{border-right: none;}
+footer p{font-size: 12px;color: #fff;position: absolute;left: 493px;line-height: 22px;opacity: 0.6; top: 106px;
+}
+footer .SNS {position: absolute;top: 35px;right: 50px;}
+footer .SNS ul{display: flex;}
+footer .SNS ul li{padding-left: 32px;opacity: 0.5;transition: 0.2s;}
+footer .SNS ul li:hover{opacity: 1;}
+.menu{display: none;}
+@media (max-width: 1595px) {
+  main .Bose li:first-child{width: 533px;height: 656px;top: 272px;left: 45vw;}
+  main .Bose li:first-child img{width: 531px;height: 431px;}
+  main .Bose li:first-child h2{font-size: 34px;top: 456px;left: 0;}
+  main .Bose li:first-child span{top:512px;left: 0;}
+  main .Bose li:first-child p{top: 581px;left: 0;}
+  main .Bose li:first-child p.Dr{top: 395px;left: 366px;}
+  main .Bose li:last-child{width: 533px;height: 663px;top:1000px;left: 45vw;}
+  main .Bose li:last-child img{width: 100%;height: 401px;}
+  main .Bose li:last-child h2{font-size: 33px;top: 425px;left: 0;}
+  main .Bose li:last-child p{width: 100%;top: 494px;}
+  footer{bottom: -1800px;}
+  main .but{width: 507px;flex-wrap: wrap;left: 46vw;}
+  main .but li{margin-bottom: 22px;}
+
+
+  }
+
+
+@media (max-width:1018px) {
+  .menu{display: block;}
+  header{display: none;}
+  
+  .Mobile_header{display: block;position: fixed;z-index: 10;}
+  .Mobile_header .img{height: 77px;overflow: hidden;}
+  .Mobile_header .img img{width: 100%;object-fit: cover;transform: translateY(-150px);filter: brightness(15%);}
+  .Mobile_header .logo{position: absolute;top:60%;left: 50%;transform: translate(-50% ,-50%);z-index: 10;}
+ 
+  .Mobile_header .logo img{width: 165px;opacity: 0.8;}
+
+  .Mobile_header div.menuicon {left: 39px;top: 32px;position: absolute;opacity: 0.5;transition: 0.2s;}
+  .Mobile_header div.menuicon:hover{opacity: 1;}
+ .menu {width: 360px;height: 100%;position: fixed;z-index: 20;overflow: hidden;transition: 0.5s;left: -400px;}
+ .menu.Action{left: 0;}
+.menu .bg{height: 100vh;opacity: 0.8;}
+.menu  nav{position: absolute;z-index: 10;left: 59px;top: 110px;}
+.menu  nav>ul>li>a{color: #fff;font-size: 22px;text-align:left;padding:8px 16px;line-height:7vh; border-radius: 15px;}
+.menu  nav>ul>li:hover>a{background-color: #fff;color:#000;font-weight: 600;transition: 0.3s;}
+
+  main .but{left: 50%;transform: translateX(-50%);top: 109px;}
+  main .Bose li:first-child{left: 50%;transform: translateX(-50%);top: 249px;}
+  main .Bose li:last-child{left: 50%;transform: translateX(-50%);}
+
+    .Mobile_header .icon {position: absolute;top:32px;right: 45px;filter:  invert(100%);}
+    main .icon{display: none;}
+    .Mobile_header .icon ul{display: flex;}
+    .Mobile_header .icon ul li{padding-left: 26px;transition: 0.2s;}
+    .Mobile_header .icon ul li:hover{filter: contrast(1%);}
+
+    footer .f_menu{ left: 40px;top: 70px;}
+    footer p{bottom: 70px;left: 40px;padding-right: 40px;}
+    
+   
+}
+@media (max-width:580px) {
+  .Mobile_header div.menuicon{top: 50%;transform: translateY(-50%);}
+  .Mobile_header{height: 51px;}
+  .Mobile_header .img{height: 100%;}
+  .Mobile_header .logo{display: none;}
+  .Mobile_header .icon{top: 50%;transform: translateY(-50%);}
+  .Mobile_header .icon{top: 50%;transform: translateY(-50%);}
+  main .but{width: 340px;flex-wrap: wrap;left: 53%;top: 76px;}
+  main .but li{margin-bottom:8px;}
+  main .Bose li:first-child {width: 319px;height: 418px;top: 225px;}
+  main .Bose li:first-child img{width: 100%;height: 259px;}
+  main .Bose li:first-child h2{font-size: 20px;top: 274px;}
+  main .Bose li:first-child p{font-size: 12px;line-height: 18px;top: 360px;}
+  main .Bose li:first-child span{font-size: 11px;top: 310px;line-height: 16px;}
+
+  main .Bose li:last-child {width: 319px;height: 468px;top: 690px;}
+  main .Bose li:last-child img{width: 100%;height:250px;}
+  main .Bose li:last-child h2{font-size: 20px;top: 260px;}
+  main .Bose li:last-child p{font-size: 12px;line-height: 18px;top: 305px;}
+  footer{bottom: -1200px;}
+  
+}
+
+
